@@ -13,6 +13,9 @@ const target = {
 }
 
 function generateTrashTalk(userPicked) {
+  if (!userPicked) {
+    return `請選擇一個職業對他說幹話!!`
+  }
   const professionIndex = Math.floor(Math.random() * task[userPicked].length)
   const sentenceIndex = Math.floor(Math.random() * phrase.length)
 
