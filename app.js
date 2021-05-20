@@ -2,10 +2,12 @@
 const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
-const generateTrashTalk = require('./generate_trashTalk')
-const port = 3000
 const hbshelpers = require('handlebars-helpers');
 const multihelpers = hbshelpers();
+const port = 3000
+const generateTrashTalk = require('./generate_trashTalk')
+
+
 // setting template engine
 app.engine('handlebars', exphbs({ helpers: multihelpers, defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
