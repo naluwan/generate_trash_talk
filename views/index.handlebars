@@ -1,0 +1,66 @@
+<div class="container text-center">
+  <div class="row my-5">
+    <div class="col">
+      <h1 style="color:azure;"><i class="fas fa-comments mx-2"></i>你想對誰說幹話？</h1>
+    </div>
+  </div>
+
+  <form action="/" method="post">
+    <div class="row">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+              alt="engineer-img" class="col-12 p-0" height="230px" width="auto">
+          </div>
+          <div class="custom-control custom-radio card-footer d-flex justify-content-center">
+            <input type="radio" id="engineer" name="userPicked" class="custom-control-input" value="engineer" {{#is
+              userPicked 'engineer' }} checked {{/is}}>
+            <label class="custom-control-label" for="engineer">工程師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+              alt="designer-img" class="col-12 p-0" height="230px" width="auto">
+          </div>
+          <div class=" custom-control custom-radio card-footer d-flex justify-content-center">
+            <input type="radio" id="designer" name="userPicked" class="custom-control-input" value="designer" {{#is
+              userPicked 'designer' }} checked {{/is}}>
+            <label class="custom-control-label" for="designer">設計師</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+              alt="entrepreneur-img" class="col-12 p-0" height="230px" width="auto">
+          </div>
+          <div class="custom-control custom-radio card-footer d-flex justify-content-center">
+            <input type="radio" id="entrepreneur" name="userPicked" class="custom-control-input" value="entrepreneur"
+              {{#is userPicked 'entrepreneur' }} checked {{/is}}>
+            <label class="custom-control-label" for="entrepreneur">創業家</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-2">
+        <button type="submit" class="btn btn-success">產生幹話</button>
+      </div>
+      {{#if rubbish}}
+      <div class="col-10">
+        <textarea class="alert alert-warning w-100" role="alert">{{rubbish}}</textarea>
+      </div>
+      {{/if}}
+
+    </div>
+  </form>
+
+</div>
